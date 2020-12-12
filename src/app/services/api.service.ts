@@ -70,4 +70,5 @@ export class ApiService {
       catchError(this.handleError<Statistic>(`getStatistic status=${status}`))
     );
   }
+
 }

@@ -5,8 +5,18 @@ import { CasesDetailsComponent } from './cases-details/cases-details.component';
 import { CasesStatComponent } from './cases-stat/cases-stat.component';
 import { AddCasesComponent } from './add-cases/add-cases.component';
 import { EditCasesComponent } from './edit-cases/edit-cases.component';
+import {AuthGuard} from '@auth0/auth0-angular';
 
 const routes: Routes = [
+  {
+    path: 'protected',
+    component: AddCasesComponent,
+
+    // Protect a route by registering the auth guard in the `canActivate` hook
+    canActivate: [AuthGuard],
+    data: { title: 'Add Cases' }
+
+  },
   {
     path: 'cases',
     component: CasesComponent,
@@ -21,11 +31,6 @@ const routes: Routes = [
     path: 'cases-stat',
     component: CasesStatComponent,
     data: { title: 'Cases Statistic' }
-  },
-  {
-    path: 'add-cases',
-    component: AddCasesComponent,
-    data: { title: 'Add Cases' }
   },
   {
     path: 'edit-cases/:id',

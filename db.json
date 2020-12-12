@@ -135,16 +135,7 @@
       "status": "Dead",
       "update": "2020-12-13",
       "id": 12
-    },
-    {
-      "name": "sasuki",
-      "gender": "Male",
-      "age": 55,
-      "address": "Tokyo ghoul",
-      "city": "Tokyo",
-      "country": "Japan",
-      "status": "Recovered",
-      "id": 13
     }
+
   ]
 }

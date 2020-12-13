@@ -1,0 +1,151 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "name": "typicode"
+    },
+    {
+      "id": 3,
+      "name": "missou"
+    },
+    {
+      "name": "doublemissou",
+      "id": 4
+    }
+  ],
+  "api": [
+    {
+      "name": "john",
+      "gender": "Male",
+      "age": 19,
+      "address": "Ghazela",
+      "city": "Ariana",
+      "country": "Tunisia",
+      "status": "Positive",
+      "id": 3,
+      "updated": "12/12/2020"
+    },
+    {
+      "name": "Maro",
+      "gender": "Male",
+      "age": 99,
+      "address": "Ariana Ghazela",
+      "city": "Ariana",
+      "country": "Tunisia",
+      "status": "Recovered",
+      "id": 4,
+      "updated": "12/12/2020"
+    },
+    {
+      "name": "An Kang",
+      "gender": "Female",
+      "age": 56,
+      "address": "Unknown",
+      "city": "Unknown",
+      "country": "China",
+      "status": "Dead",
+      "updated": "12/12/2020",
+      "id": 5
+    },
+    {
+      "name": "Benjamin Zhengmain Pan",
+      "gender": "Male",
+      "age": 55,
+      "address": "Unknown",
+      "city": "Unknown",
+      "country": "China",
+      "status": "Dead",
+      "updated": "12/12/2020",
+      "id": 6
+    },
+    {
+      "name": "Bill Liu",
+      "gender": "Male",
+      "age": 78,
+      "address": "Unknown",
+      "city": "Unknown",
+      "country": "China",
+      "status": "Recovered",
+      "updated": "12/12/2020",
+      "id": 7
+    },
+    {
+      "name": "Cai Dongchen",
+      "gender": "Female",
+      "age": 43,
+      "address": "Unknown",
+      "city": "Unknown",
+      "country": "Vietnam",
+      "status": "Positive",
+      "updated": "12/12/2020",
+      "id": 8
+    },
+    {
+      "name": "Cai Kui",
+      "gender": "Female",
+      "age": 68,
+      "address": "Unknown",
+      "city": "Unknown",
+      "country": "Vietnam",
+      "status": "Positive",
+      "updated": "11/12/2020",
+      "id": 9
+    },
+    {
+      "name": "Cao Ji",
+      "gender": "Female",
+      "age": 39,
+      "address": "Unknown",
+      "city": "Unknown",
+      "country": "Vietnam",
+      "status": "Positive",
+      "updated": "11/12/2020",
+      "id": 10
+    },
+    {
+      "name": "Cao Longxlang",
+      "gender": "Male",
+      "age": 35,
+      "address": "Unknown",
+      "city": "Unknown",
+      "country": "Vietnam",
+      "status": "Positive",
+      "updated": "11/12/2020",
+      "id": 11,
+      "daily": {
+        "id": 1,
+        "count": 10
+      }
+    },
+    {
+      "name": "testify",
+      "gender": "Female",
+      "age": 89,
+      "address": "sqdsqd",
+      "city": "Ariana",
+      "country": "Tunisie",
+      "status": "Dead",
+      "update": "2020-12-13",
+      "id": 12
+    }
+  ]
+}

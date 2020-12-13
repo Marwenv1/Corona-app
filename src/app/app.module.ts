@@ -25,6 +25,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { ChartsModule } from 'ng2-charts';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -58,7 +59,7 @@ import { ChartsModule } from 'ng2-charts';
     MatSelectModule,
     ChartsModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

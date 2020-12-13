@@ -27,4 +27,14 @@ export class CasesComponent implements OnInit {
         this.isLoadingResults = false;
       });
   }
+  getColor(status) {
+    switch (status) {
+      case "Recovered":
+        return "green";
+      case "Dead":
+        return "red";
+      case "Positive":
+        return "orange";
+    }
+  }
 }

@@ -7,7 +7,7 @@ import { Statistic } from '../model/statistics';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = '/api/';
+const apiUrl = 'http://localhost:3000/api';
 @Injectable({
   providedIn: 'root'
 })
@@ -42,7 +42,7 @@ export class ApiService {
 
   addCases(cases: Cases): Observable<Cases> {
     return this.http.post<Cases>(apiUrl, cases, httpOptions).pipe(
-      tap((c: Cases) => console.log(`added cases w/ id=${c._id}`)),
+      tap((c: Cases) => console.log(`added cases w/ id=${c.id}`)),
       catchError(this.handleError<Cases>('addCases'))
     );
   }
@@ -64,7 +64,7 @@ export class ApiService {
   }
 
   getStatistic(status: string): Observable<Statistic> {
-    const url = `${apiUrl}/daily/${status}`;
+    const url = `${apiUrl}/?${status}`;
     return this.http.get<Statistic>(url).pipe(
       tap(_ => console.log(`fetched statistic status=${status}`)),
       catchError(this.handleError<Statistic>(`getStatistic status=${status}`))
@@ -72,3 +72,5 @@ export class ApiService {
   }
 
 }
+
+

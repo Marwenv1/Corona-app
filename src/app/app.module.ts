@@ -28,7 +28,6 @@ import { ChartsModule } from 'ng2-charts';
 import { DatePipe } from '@angular/common';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AuthModule } from '@auth0/auth0-angular';
-import { BackgroundComponent } from './background/background.component';
 
 
 
@@ -41,7 +40,6 @@ import { BackgroundComponent } from './background/background.component';
     AddCasesComponent,
     EditCasesComponent,
     CasesStatComponent,
-    BackgroundComponent
   ],
   imports: [
     BrowserModule,

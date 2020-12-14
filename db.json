@@ -45,17 +45,6 @@
       "updated": "12/12/2020"
     },
     {
-      "name": "Maro",
-      "gender": "Male",
-      "age": 99,
-      "address": "Ariana Ghazela",
-      "city": "Ariana",
-      "country": "Tunisia",
-      "status": "Recovered",
-      "id": 4,
-      "updated": "12/12/2020"
-    },
-    {
       "name": "An Kang",
       "gender": "Female",
       "age": 56,
@@ -146,6 +135,16 @@
       "status": "Dead",
       "update": "2020-12-13",
       "id": 12
+    },
+    {
+      "name": "sasuki",
+      "gender": "Male",
+      "age": 55,
+      "address": "Tokyo ghoul",
+      "city": "Tokyo",
+      "country": "Japan",
+      "status": "Recovered",
+      "id": 13
     }
   ]
 }

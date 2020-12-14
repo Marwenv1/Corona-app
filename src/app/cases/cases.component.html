@@ -4,34 +4,53 @@
        *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
+  <input type="text" style="float:right" (keyup)="applyFilter($any($event.target).value)" placeholder="search for" class="form-control-sm top-margin">
+
   <div class="button-row">
     <a mat-flat-button color="primary" [routerLink]="['/add-cases']"><mat-icon>add</mat-icon> Cases</a>
     <a mat-flat-button color="accent" [routerLink]="['/cases-stat']"><mat-icon>bar_chart</mat-icon> Statistic</a>
   </div>
   <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="data" class="example-table"
-           matSort matSortActive="name" matSortDisableClear matSortDirection="asc" >
-
-      <!-- Cases Name Column -->
+    <mat-table class="mat-elevation-z8" [dataSource]="userListMatTabDataSource" matSort matSortActive="userName"
+               matSortDirection="asc" matSortDisableClear>
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef>Sr No</mat-header-cell>
+        <mat-cell *matCellDef="let user; let i = index;">
+          {{i+1}}
+        </mat-cell>
+      </ng-container>
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Cases Name</th>
-        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          {{user.name}}
+        </mat-cell>
       </ng-container>
-
-      <!-- Cases Age Column -->
       <ng-container matColumnDef="age">
-        <th mat-header-cell *matHeaderCellDef>Age</th>
-        <td mat-cell *matCellDef="let row">{{row.age}}</td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Age</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          {{user.age}}
+        </mat-cell>
       </ng-container>
-
-      <!-- Cases Status Column -->
-      <ng-container matColumnDef="status" >
-        <th mat-header-cell *matHeaderCellDef >Status</th>
-        <td mat-cell *matCellDef="let row" [style.color]="getColor(row.status)">{{row.status}}</td>
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          {{user.status}}
+        </mat-cell>
       </ng-container>
+      <ng-container matColumnDef="country">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Country</mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          {{user.country}}
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns; let i = index;" [class.selected]="selectedRow == row.id"
+               (click)="rowClick(row.id)" [routerLink]="['/cases-details/', row.id]">
+      </mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[3, 5, 10]" showFirstLastButtons></mat-paginator>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/cases-details/', row._id]"></tr>
-    </table>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/cases-details/', row.id]">
   </div>
 </div>

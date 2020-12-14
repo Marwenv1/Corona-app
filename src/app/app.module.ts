@@ -26,6 +26,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { ChartsModule } from 'ng2-charts';
 import { DatePipe } from '@angular/common';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 @NgModule({
@@ -58,6 +60,7 @@ import { DatePipe } from '@angular/common';
     MatButtonToggleModule,
     MatSelectModule,
     ChartsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

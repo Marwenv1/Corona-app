@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../shared/api.service';
 import { Cases } from '../model/cases';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
@@ -34,8 +34,7 @@ export class CasesComponent implements OnInit {
     this.getData();
     console.log(this.data1);
     this.editedRows = [];
-    this.userListMatTabDataSource.paginator = this.paginator;
-    this.userListMatTabDataSource.sort = this.sort;
+
   }
   getColor(status) {
     switch (status) {
@@ -60,6 +59,8 @@ export class CasesComponent implements OnInit {
         this.data1 = res;
         console.log(this.data1);
         this.userListMatTabDataSource.data = this.data1 ;
+        this.userListMatTabDataSource.paginator = this.paginator;
+        this.userListMatTabDataSource.sort = this.sort;
         this.isLoadingResults = false;
       }, err => {
         console.log(err);

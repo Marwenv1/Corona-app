@@ -27,6 +27,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { ChartsModule } from 'ng2-charts';
 import { DatePipe } from '@angular/common';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AuthModule } from '@auth0/auth0-angular';
+
 
 
 
@@ -61,6 +63,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MatSelectModule,
     ChartsModule,
     Ng2SearchPipeModule,
+    AuthModule.forRoot({
+      domain: 'dev-zj-m4un0.eu.auth0.com',
+      clientId: 'ETeRZh2HQVbBk2WLaDRFkzFCXtPpnH4M'
+    }),
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

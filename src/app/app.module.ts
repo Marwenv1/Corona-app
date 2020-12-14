@@ -28,6 +28,7 @@ import { ChartsModule } from 'ng2-charts';
 import { DatePipe } from '@angular/common';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AuthModule } from '@auth0/auth0-angular';
+import { BackgroundComponent } from './background/background.component';
 
 
 
@@ -39,7 +40,8 @@ import { AuthModule } from '@auth0/auth0-angular';
     CasesDetailsComponent,
     AddCasesComponent,
     EditCasesComponent,
-    CasesStatComponent
+    CasesStatComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,
@@ -71,4 +73,5 @@ import { AuthModule } from '@auth0/auth0-angular';
   providers: [DatePipe],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
